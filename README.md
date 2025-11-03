@@ -9,7 +9,7 @@ Un petit site convivial en **Next.js** pour permettre aux habitants de **Sergey*
 - Formulaire d’inscription avec prénom uniquement  
 - Envoi automatique d’un e-mail à chaque inscription (via [Resend](https://resend.com))  
 - Fermeture automatique des inscriptions **le jeudi à 00h00**  
-- Interface élégante avec fond animé (effet "nuit & lucioles") ✨  
+- Interface élégante avec fond animé (effet "nuit & lucioles")  
 - Compatible mobile et desktop
 
 ---
