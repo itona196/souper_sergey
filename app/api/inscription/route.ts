@@ -7,8 +7,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 function inscriptionsOuvertes() {
   const now = new Date();
   const jeudi = nextThursday(now);
-  const jeudiMidi = setMinutes(setHours(jeudi, 12), 0);
-  return isBefore(now, jeudiMidi);
+  const jeudiMinuit = setMinutes(setHours(jeudi, 0), 0); 
+  return isBefore(now, jeudiMinuit);
 }
 
 export async function POST(request: Request) {
