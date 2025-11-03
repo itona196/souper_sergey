@@ -58,7 +58,7 @@ Le site est disponible sur :
 ---
 
 
-## Auteurs
+## Auteur
 
 **Esteban Soler**  
 
