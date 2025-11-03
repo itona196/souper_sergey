@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧀 Souper du Jeudi à Sergey
 
-## Getting Started
+Un petit site convivial en **Next.js** pour permettre aux habitants de **Sergey** de s’inscrire chaque semaine au souper du jeudi organisé par Esteban & Loan.
 
-First, run the development server:
+---
+
+## 🚀 Fonctionnalités
+
+- Formulaire d’inscription avec prénom uniquement  
+- Envoi automatique d’un e-mail à chaque inscription (via [Resend](https://resend.com))  
+- Fermeture automatique des inscriptions **le jeudi à 00h00**  
+- Interface élégante avec fond animé (effet "nuit & lucioles") ✨  
+- Compatible mobile et desktop
+
+---
+
+## 🛠️ Technologies
+
+- [Next.js 15](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Resend API](https://resend.com/)
+- [date-fns](https://date-fns.org/)
+
+---
+
+## ⚙️ Installation
+
+Clone le projet :
+
+```bash
+git clone https://github.com/itona196/souper_sergey.git
+cd souper_sergey
+```
+
+Installe les dépendances :
+
+```bash
+npm install
+```
+
+Crée un fichier `.env.local` à la racine avec ta clé Resend :
+
+```bash
+RESEND_API_KEY=ta_cle_resend
+```
+
+Lance le serveur local :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site est disponible sur :
+👉 [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Déploiement
 
-## Learn More
+Tu peux héberger le projet sur :
+- [Infomaniak App Hosting](https://www.infomaniak.com/fr/hosting/web)
+- ou [Vercel](https://vercel.com/) (config automatique pour Next.js)
 
-To learn more about Next.js, take a look at the following resources:
+Pense à définir ta clé `RESEND_API_KEY` dans les **variables d’environnement** de ta plateforme d’hébergement.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧑‍💻 Auteurs
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Projet réalisé avec ❤️ par **Esteban & Loan**  
+> “Jeudi soir – Lumières, rires & convivialité 🌙”
