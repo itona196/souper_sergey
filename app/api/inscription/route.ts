@@ -25,19 +25,23 @@ export async function POST(request: Request) {
     );
   }
 
-  try {
-    await resend.emails.send({
-      from: "Souper du Jeudi <onboarding@resend.dev>",
-      to: "esteb.sol@bluewin.ch",
-      subject: `Nouvelle inscription au souper du jeudi`,
-      text: `Nouvelle inscription : ${prenom}`,
-    });
-
-    return NextResponse.json({ success: true });
-  } catch (err) {
-    return NextResponse.json(
-      { error: "Erreur lors de l’envoi du mail." },
-      { status: 500 }
-    );
+try {
+  const to = process.env.MAIL_DESTINATION;
+  if (!to) {
+    throw new Error("MAIL_DESTINATION non défini dans .env.local");
   }
-}
+
+  await resend.emails.send({
+    from: "Souper du Jeudi <onboarding@resend.dev>",
+    to, 
+    subject: `Nouvelle inscription au souper du jeudi`,
+    text: `Nouvelle inscription : ${prenom}`,
+  });
+
+  return NextResponse.json({ success: true });
+} catch (err) {
+  return NextResponse.json(
+    { error: "Erreur lors de l’envoi du mail." },
+    { status: 500 }
+  );
+}}
